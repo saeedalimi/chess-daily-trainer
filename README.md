@@ -6,6 +6,16 @@ A modern, fluid, and responsive chess training web application built with **Next
 
 ---
 
+## 📸 Screenshots
+
+![Home Page](screenshot/Screenshot1.png)
+
+![Puzzle Solving](screenshot/Screenshot2.png)
+
+![Progress Tracker](screenshot/Screenshot3.png)
+
+---
+
 ## ✨ Features
 
 - **400+ Curated Puzzles:** Sourced from real games across three difficulty tiers.
