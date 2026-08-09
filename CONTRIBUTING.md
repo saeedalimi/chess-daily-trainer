@@ -29,5 +29,4 @@ First off, thank you for considering contributing to Chess Daily Trainer! It's p
 - Comment complex algorithms or non-obvious UI decisions.
 
 Thanks!
-Alimi
-🤖 Generated with [Claude Code](https://claude.com/claude-code)
+S.Alimi
