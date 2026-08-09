@@ -28,7 +28,7 @@ A modern, fluid, and responsive chess training web application built with **Next
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/chess-daily-trainer.git
+   git clone https://github.com/saeedalimi/chess-daily-trainer.git
    cd chess-daily-trainer/chess-app
    ```
 
@@ -77,4 +77,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
-Created with ❤️ by Alimi
+Created with ❤️ by Saeed Alimi
