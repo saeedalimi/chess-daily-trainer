@@ -78,4 +78,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 Created with ❤️ by Alimi
-🤖 Generated with [Claude Code](https://claude.com/claude-code)
