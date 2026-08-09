@@ -1,0 +1,55 @@
+# GitHub Actions Workflow - CI/CD for Chess Daily Trainer
+
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: chess-app/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./chess-app
+
+      - name: Run ESLint
+        run: npm run lint
+        working-directory: ./chess-app
+
+      - name: Type-check with TypeScript
+        run: npx tsc --noEmit
+        working-directory: ./chess-app
+
+      - name: Build application
+        run: npm run build
+        working-directory: ./chess-app
+
+  # Optional: Deploy to Vercel on push to main
+  # deploy:
+  #   needs: lint-and-test
+  #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Deploy to Vercel
+  #       uses: amondnet/vercel-action@v25
+  #       with:
+  #         vercel-token: ${{ secrets.VERCEL_TOKEN }}
+  #         vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+  #         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+  #         vercel-args: '--prod'
+  #       working-directory: ./chess-app
